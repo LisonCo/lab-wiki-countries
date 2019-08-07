@@ -1,0 +1,8 @@
+.myApp {
+    box-sizing: border-box;
+    width: 40vh;
+    height: 100vh;
+    overflow-y: scroll;
+    float: left;
+    padding: 2%;
+}
