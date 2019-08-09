@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
-import countries from "./countries.json";
 import Country from "./country.jsx";
 import './myApp.css'
 
+
 class myApp extends Component {
-    state = {
-        countries: countries
-    }
+
     render() {
-    let allCountries = this.state.countries.map((country) => {
+    let allCountries = this.props.countries.map((country) => {
         return (
             <Country 
             name={country.name.common}
@@ -25,3 +23,4 @@ class myApp extends Component {
 }
 
 export default myApp
+

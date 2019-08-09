@@ -2,9 +2,10 @@ import React from 'react';
 import {Route} from 'react-router-dom';
 import CountryDetail from './countryDetail';
 
-const mainContainer = () => {
+function mainContainer(props) {
+    debugger
     return (
-        <Route path='/details/:id' component={CountryDetail}/>
+        <Route exact path="/details/:id" render={()=> <CountryDetail countries={props.countries}/>} />
     )
 }
 

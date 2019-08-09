@@ -1,16 +1,16 @@
 import React from 'react';
-import countries from "./countries.json";
 import {Link} from 'react-router-dom';
 import './countryDetail.css'
 
 function countryDetail (props) {
+    
     const getCountry = (id) => {
-        let found = countries.find(oneCountry => {
+        let found = props.countries.find(oneCountry => {
             return oneCountry.cca3 === id;
         })
         return found;
     }
-    const { params } = props.match;
+    const params  = props.match;
     const foundCountry = getCountry(params.id);
 
     return (
